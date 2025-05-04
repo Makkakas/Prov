@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - Bangolfklubben Munken</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-yellow-50 text-gray-800 font-sans">
+  <div id="header"></div>
+  <main class="max-w-4xl mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-4">Kontakt</h2>
+<p>Du är alltid välkommen att kontakta oss vid frågor:</p>
+<ul class="mt-2 mb-6">
+  <li>E-post: <a href="mailto:info@bgk-munken.se" class="text-yellow-700 underline">info@bgk-munken.se</a></li>
+  <li>Telefon: 0123-456 789</li>
+  <li>Adress: Munkgatan 1, 592 30 Vadstena</li>
+</ul>
+<form class="space-y-4">
+  <div>
+    <label class="block font-semibold" for="namn">Namn</label>
+    <input class="w-full border border-gray-300 rounded p-2" type="text" id="namn" name="namn" required>
+  </div>
+  <div>
+    <label class="block font-semibold" for="epost">E-post</label>
+    <input class="w-full border border-gray-300 rounded p-2" type="email" id="epost" name="epost" required>
+  </div>
+  <div>
+    <label class="block font-semibold" for="meddelande">Meddelande</label>
+    <textarea class="w-full border border-gray-300 rounded p-2" id="meddelande" name="meddelande" rows="4" required></textarea>
+  </div>
+  <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded">Skicka</button>
+</form>
+  </main>
+  <div id="footer"></div>
+  
+<script>
+  fetch("includes/header.html").then(r => r.text()).then(t => document.getElementById("header").innerHTML = t);
+  fetch("includes/footer.html").then(r => r.text()).then(t => document.getElementById("footer").innerHTML = t);
+</script>
+
+</body>
+</html>
